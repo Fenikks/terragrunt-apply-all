@@ -1,5 +1,5 @@
-name: terragrunt-plan-all
-description: Create a Terraform plan
+name: terragrunt-apply-all
+description: Applay a Terraform plan
 author: Alina Freydina
 
 inputs:
@@ -34,6 +34,6 @@ inputs:
 
 runs:
   using: docker
-  image: docker://ghcr.io/fenikks/gh-actions-terragrunt@sha256:f86b9d32fa4733309b48049e49ae97083bc58098c8833cd8680d8c62d70dbf69
+  image: docker://ghcr.io/fenikks/gh-actions-terragrunt@sha256:6e2a4db470850e6608b63784f3f2352ed93ebb0138af6889f21dbb05062653d8
   entrypoint: /entrypoints/tg_apply_all.sh
 
