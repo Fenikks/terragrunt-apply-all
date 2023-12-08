@@ -31,9 +31,13 @@ inputs:
     description: Automatically approve and apply plans
     required: false
     default: "false"
+  strategy:
+    description: "What strategy to use when applying: parallel or sequential"
+    required: false
+    default: "parallel"
 
 runs:
   using: docker
-  image: docker://ghcr.io/fenikks/gh-actions-terragrunt@sha256:e1dea95da4d8ba67c8eb2231ccc26dfe7ac1b6bf567449dbf37485e2007d45d1
+  image: docker://ghcr.io/fenikks/gh-actions-terragrunt@sha256:b5a8a075fcec14157343b61c884a8ed9cfa6bb2b61911188a37181ecd8c14d8c
   entrypoint: /entrypoints/tg_apply_all.sh
 
